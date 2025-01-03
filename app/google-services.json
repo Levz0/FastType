@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "950168558802",
+    "project_id": "fasttype-fad79",
+    "storage_bucket": "fasttype-fad79.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950168558802:android:929a5293f26391accfe10b",
+        "android_client_info": {
+          "package_name": "com.example.fasttype"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKeEnt9mGfeqNepZ8QxyCjkwvajQSs_vY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

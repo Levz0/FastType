@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -95,13 +95,14 @@
         app:layout_constraintVertical_bias="0.367" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Btn_reg"
         android:layout_width="202dp"
         android:layout_height="56dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/fonts"
         android:text="Зарегистрироваться"
         android:textAllCaps="false"
+        android:onClick = "onClickCheckClickValidity"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,4 +114,4 @@
 
         />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

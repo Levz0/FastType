@@ -5,11 +5,11 @@ plugins {
 
 android {
     compileSdk 33
-    namespace 'com.example.fasttype'
+
     defaultConfig {
         applicationId "com.example.fasttype"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -31,18 +31,21 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
-    // Firebase BOM для версии 4.3.15 плагина
-    implementation platform('com.google.firebase:firebase-bom:29.0.4')
 
-    // Firebase Analytics
-    implementation 'com.google.firebase:firebase-analytics'
+    // Зависимости для Firebase
+    implementation 'com.google.firebase:firebase-auth:21.0.5'
+    implementation 'com.google.firebase:firebase-database:20.0.5'
+    implementation 'com.google.firebase:firebase-firestore:24.4.2'
+    implementation 'com.google.firebase:firebase-core:21.1.0'
+    implementation 'com.google.android.material:material:1.8.0'
 
-    // Firebase Database
-    implementation 'com.google.firebase:firebase-database'
 
-    // Тестирование
+
+    // Зависимости для тестирования
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test:runner:1.5.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 }
+

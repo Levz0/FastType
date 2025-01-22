@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,6 +15,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,8 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         Regform_Slide();
 
     }
-
-    public void onClickCheckClickValidity(View view){
+    public void onClickCheckValidity(View view){
         EditText loginTxt = findViewById(R.id.loginInput);
         EditText passwordTxt = findViewById(R.id.passwordInput);
 
@@ -84,10 +84,12 @@ public class LoginActivity extends AppCompatActivity {
                 {
                     User user = new User(inputLogin, inputPassword, tests);
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+
                     intent.putExtra("user", user);
                     Toast.makeText(LoginActivity.this, "Авторизация прошла успешно", Toast.LENGTH_SHORT).show();
                     Toast.makeText(LoginActivity.this, "Добро пожаловать " + inputLogin, Toast.LENGTH_SHORT).show();
                     startActivity(intent);
+
                     finish();
                 }
                 else

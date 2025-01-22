@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FastType</string>
+    <string-array name="word_count_options">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+    <string name="hint_start_typing">Start typing...</string>
 </resources>

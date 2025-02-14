@@ -11,6 +11,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity {
 
+    public User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         createWidget();
     }
     private void createUser(){
-        User user = (User)getIntent().getSerializableExtra("user");
+        user = (User)getIntent().getSerializableExtra("user");
 
         if (user != null) {
             // Используем данные пользователя

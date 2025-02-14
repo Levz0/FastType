@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(LoginActivity.this, "Ошибка чтении данных", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Ошибка чтения данных", Toast.LENGTH_SHORT).show();
             }
         });
     }

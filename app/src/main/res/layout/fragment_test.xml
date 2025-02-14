@@ -1,65 +1,86 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_test_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/gray">
+    android:padding="24dp"
+    android:background="@android:color/darker_gray">
 
-    <!-- Вывод целевого текста -->
-    <TextView
-        android:id="@+id/targetTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:padding="16dp"
-        android:lineSpacingExtra="4dp"
-        android:scrollHorizontally="true"
-        android:ellipsize="end"
-        android:singleLine="false"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Поле ввода текста -->
-    <EditText
-        android:id="@+id/inputField"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Введите текст"
-        android:background="@null"
-        android:textColor="@android:color/white"
-        android:cursorVisible="true"
-        android:inputType="text"
-        android:textSize="18sp"
-        android:padding="12dp"
-        android:backgroundTint="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/targetTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Spinner для выбора количества слов -->
-    <Spinner
-        android:id="@+id/wordCountSpinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/inputField"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Подпись к Spinner -->
-    <TextView
-        android:id="@+id/wordCountLabel"
+    <!-- RadioGroup для выбора типа теста -->
+    <RadioGroup
+        android:id="@+id/testTypeRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Количество слов"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/wordCountSpinner"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time" />
+
+        <RadioButton
+            android:id="@+id/radioWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Word" />
+    </RadioGroup>
+
+    <!-- Spinner для выбора количества слов (виден, если выбран режим «Word») -->
+    <Spinner
+        android:id="@+id/wordCountSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/testTypeRadioGroup"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ScrollView для обеспечения прокрутки длинного текста -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/wordCountSpinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Контейнер для наложения TextView и невидимого EditText -->
+        <FrameLayout
+            android:id="@+id/typingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Видимый текст с раскраской (имитирует поле ввода) -->
+            <TextView
+                android:id="@+id/coloredTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:background="@drawable/edit_text_background"
+                android:textColor="@android:color/black"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Target text will appear here" />
+
+            <!-- Невидимый EditText для приёма ввода;
+                 Отключены предложения, чтобы неверно введённый текст не подчёркивался -->
+            <EditText
+                android:id="@+id/hiddenInputField"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:textColor="@android:color/transparent"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1" />
+        </FrameLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

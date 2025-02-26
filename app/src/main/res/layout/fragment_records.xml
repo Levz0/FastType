@@ -25,13 +25,15 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
-        android:stretchColumns="1"
         android:divider="@android:color/darker_gray"
         android:showDividers="middle"
-        app:layout_constraintTop_toBottomOf="@id/recordsTitle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recordsTitle"
+        app:layout_constraintVertical_bias="1.0">
 
         <!-- Заголовок таблицы -->
         <TableRow
@@ -42,30 +44,30 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Никнейм"
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Дата"
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Точность"
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Слов в мин."
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:textColor="@android:color/white" />
         </TableRow>
 
         <!-- Пустые ячейки -->
@@ -76,30 +78,30 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="-"
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="-"
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="-"
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="-"
-                android:textColor="@android:color/white"
-                android:padding="8dp" />
+                android:textColor="@android:color/white" />
         </TableRow>
 
     </TableLayout>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray">
 
-    <!-- Заголовок таблицы -->
+    <!-- Заголовок таблицы "Рекорды" -->
     <TextView
         android:id="@+id/recordsTitle"
         android:layout_width="wrap_content"
@@ -19,23 +20,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Таблица рекордов -->
+    <!-- Таблица "Рекорды" -->
     <TableLayout
         android:id="@+id/recordsTable"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:divider="@android:color/darker_gray"
         android:showDividers="middle"
         android:stretchColumns="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recordsTitle"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Заголовок таблицы -->
+        <!-- Заголовок таблицы "Рекорды" -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,7 +68,7 @@
                 android:textColor="@android:color/white" />
         </TableRow>
 
-        <!-- Пустые ячейки -->
+        <!-- Пример пустой строки (можно удалять, если строки будут добавляться динамически) -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -103,7 +101,90 @@
                 android:text="-"
                 android:textColor="@android:color/white" />
         </TableRow>
+    </TableLayout>
 
+    <!-- Заголовок таблицы "Мои результаты" -->
+    <TextView
+        android:id="@+id/myResultsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мои результаты"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/recordsTable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Таблица "Мои результаты" -->
+    <TableLayout
+        android:id="@+id/myResultsTable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/darker_gray"
+        android:showDividers="middle"
+        android:stretchColumns="1"
+        app:layout_constraintTop_toBottomOf="@id/myResultsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Заголовок таблицы "Мои результаты" -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Дата"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Точность"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Слов в мин."
+                android:textColor="@android:color/white" />
+        </TableRow>
+
+        <!-- Пример пустой строки (будет заменена данными из кода) -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="-"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="-"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="-"
+                android:textColor="@android:color/white" />
+        </TableRow>
     </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

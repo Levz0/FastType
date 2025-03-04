@@ -7,8 +7,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
-    public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
-        super(fragmentActivity);
+    private User user;
+    public ViewPagerAdapter(@NonNull FragmentActivity activity, User user) {
+        super(activity);
+        this.user = user;
     }
 
     @NonNull
@@ -20,7 +22,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
             case 1:
                 return new RecordsFragment();
             case 2:
-                return new ProfileFragment();
+                return ProfileFragment.newInstance(user);
             default:
                 return new TestFragment();
         }

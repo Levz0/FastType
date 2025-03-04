@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/User/Nosova/AndroidStudioProject/FastType/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.182" />
+        <entry key="..\:/User/Nosova/AndroidStudioProject/FastType/app/src/main/res/drawable/custom_cursor.xml" value="0.182" />
+        <entry key="..\:/User/Nosova/AndroidStudioProject/FastType/app/src/main/res/drawable/edit_text_background.xml" value="0.182" />
+        <entry key="..\:/User/Nosova/AndroidStudioProject/FastType/app/src/main/res/layout/activity_main.xml" value="0.1175925925925926" />
         <entry key="..\:/User/Nosova/AndroidStudioProject/FastType/app/src/main/res/layout/activity_regform.xml" value="0.1816123188405797" />
+        <entry key="..\:/User/Nosova/AndroidStudioProject/FastType/app/src/main/res/layout/fragment_profile.xml" value="0.2765625" />
         <entry key="..\:/User/Nosova/AndroidStudioProject/FastType/app/src/main/res/layout/fragment_records.xml" value="0.33" />
         <entry key="..\:/User/Nosova/AndroidStudioProject/FastType/app/src/main/res/layout/fragment_test.xml" value="0.1175925925925926" />
         <entry key="..\:/Users/Levonchik/AndroidStudioProjects/FastType/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />

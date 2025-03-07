@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void createWidget() {
         ViewPager2 viewPager2 = findViewById(R.id.viewPager2);
-        ViewPagerAdapter adapter = new ViewPagerAdapter(this, user);
+        ViewPagerAdapter adapter = new  ViewPagerAdapter(this, user);
         viewPager2.setAdapter(adapter);
         com.google.android.material.tabs.TabLayout tabLayout = findViewById(R.id.tabLayout);
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {
